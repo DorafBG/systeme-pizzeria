@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Inscription</title>
+    <link href="inscription.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1>Inscription</h1>
+    <body>
+    <div class="container">
+        <form action="../index.php" method="get">
+            <input type="hidden" name="objet" value="client">
+            <input type="hidden" name="action" value="createAccount">
+            
+            <fieldset>
+                <legend>Informations personnelles</legend>
+                <label for="login">Login (votre pseudonyme)</label>
+                <input type="login" id="login" name="loginClient" required><br><br>
+                
+                <label for="motdepasse">Mot de passe :</label>
+                <input type="password" id="motdepasse" name="mdpClient" required><br><br>
+
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="NomClient" required><br><br>
+                
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="PrenomClient" required><br><br>
+                
+                <label for="rue">Rue :</label>
+                <input type="text" id="rue" name="RueClient" required><br><br>
+                
+                <label for="ville">Ville :</label>
+                <input type="text" id="ville" name="VilleClient" required><br><br>
+                
+                <label for="pays">Pays :</label>
+                <input type="text" id="pays" name="PaysClient" required><br><br>
+                
+                <label for="tel">Téléphone :</label>
+                <input type="tel" id="tel" name="TelClient" required><br><br>
+                
+
+                <input type="submit"value="S'inscrire">
+
+            </fieldset>
+            
+        </form>
+</body>
+</html>

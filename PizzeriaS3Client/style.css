@@ -1,0 +1,1218 @@
+@font-face{
+  font-family: 'Bebas';
+  src : url('fonts/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: 'Kanit';
+  src : url('fonts/Kanit-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-weight: normal;
+}
+
+@-webkit-keyframes font-effect-fire-animation-keyframes {
+  0% {
+    text-shadow: 0 -0.05em 0.2em #FFF, 0.01em -0.02em 0.15em #FE0, 0.01em -0.05em 0.15em #FC0, 0.02em -0.15em 0.2em #F90, 0.04em -0.20em 0.3em #F70,0.05em -0.25em 0.4em #F70, 0.06em -0.2em 0.9em #F50, 0.1em -0.1em 1.0em #F40;
+  }
+  25% {
+    text-shadow: 0 -0.05em 0.2em #FFF, 0 -0.05em 0.17em #FE0, 0.04em -0.12em 0.22em #FC0, 0.04em -0.13em 0.27em #F90, 0.05em -0.23em 0.33em #F70, 0.07em -0.28em 0.47em #F70, 0.1em -0.3em 0.8em #F50, 0.1em -0.3em 0.9em #F40;
+  }
+  50% {    text-shadow: 0 -0.05em 0.2em #FFF, 0.01em -0.02em 0.15em #FE0, 0.01em -0.05em 0.15em #FC0, 0.02em -0.15em 0.2em #F90, 0.04em -0.20em 0.3em #F70,0.05em -0.25em 0.4em #F70, 0.06em -0.2em 0.9em #F50, 0.1em -0.1em 1.0em #F40;
+  }
+  75% {
+    text-shadow: 0 -0.05em 0.2em #FFF, 0 -0.06em 0.18em #FE0, 0.05em -0.15em 0.23em #FC0, 0.05em -0.15em 0.3em #F90, 0.07em -0.25em 0.4em #F70, 0.09em -0.3em 0.5em #F70, 0.1em -0.3em 0.9em #F50, 0.1em -0.3em 1.0em #F40;
+  }
+  100% {
+    text-shadow: 0 -0.05em 0.2em #FFF, 0.01em -0.02em 0.15em #FE0, 0.01em -0.05em 0.15em #FC0, 0.02em -0.15em 0.2em #F90, 0.04em -0.20em 0.3em #F70,0.05em -0.25em 0.4em #F70, 0.06em -0.2em 0.9em #F50, 0.1em -0.1em 1.0em #F40;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eae8d7;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  font-family: 'Bebas';
+  margin-top: 60px;
+    flex: 1;
+  
+}
+
+/* header {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+#Adroite{
+  width: 2.5em;
+  height: 2.5em;
+  position: absolute;
+  top : 0;
+  right : 0;
+  padding : 8px
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  margin: 15px;
+  transition: 0.5s;
+}
+
+header a:hover {
+  color: #ff8c00;
+  font-size: 1.05em;
+  transition: 0.5s;
+} */
+
+/* Ajoutez le reste de votre CSS ci-dessus */
+
+header {
+  font-family: 'Kanit';
+  position: fixed;
+  z-index: 98; /* Assurez-vous que la valeur de z-index est inférieure à celle de la barre de navigation pour que le menu soit en dessous de la barre de navigation */
+  width: 100%;
+  background: #242526;
+  padding: 10px 0;
+}
+
+header .wrapper {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .navBar {
+  position: relative;
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 9px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+header .navBar:hover {
+  background: #3A3B3C;
+}
+
+header img#Adroite {
+  margin-top: 0.2em;
+  margin-left: auto;
+  margin-right: 30px; 
+  width: 2.5em;
+  height: 2.5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+header img#Adroite:hover {
+  transform: scale(1.1);
+}
+
+
+header img#AdroiteRempli {
+  margin-top: 0.2em;
+  margin-left: auto;
+  margin-right: 30px; 
+  width: 2.5em;
+  height: 2.5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  animation: zoomInOut 1s infinite alternate;
+  transition: transform 0.3s ease-in-out;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+header img#AdroiteRempli:hover {
+  animation: none; /* Désactive l'animation au survol */
+  transform: scale(1.1);
+}
+
+
+header img#Agauche {
+  margin-right: auto;
+  margin-left: 30px; 
+
+  width: 3em;
+  height: 3em;
+  position: absolute;
+  top : 0;
+  left : 0;
+  padding : 8px
+}
+
+header img#Agauche:hover {
+  animation: jello-horizontal 0.9s both;
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+header .navBar:hover .sub-menu {
+  display: block;
+}
+
+header .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #242526;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  z-index: 99;
+  width: 200px; /* Ajustez la largeur selon vos besoins */
+}
+
+header .sub-menu a {
+  display: block;
+  padding: 10px;
+  color: #f2f2f2;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+header .sub-menu a:hover {
+  background: #3A3B3C;
+}
+
+@media only screen and (max-width: 767px) {
+  header .navBar:nth-child(4) {
+    display: none; 
+  }
+  header .navBar:nth-child(5) {
+    margin-right: 8%; 
+  }
+  header img#Adroite {
+    margin-top: 0.5em; 
+    margin-right: 0.4em;
+  }
+  header img#AdroiteRempli {
+    margin-top: 0.5em; 
+    margin-right: 0.4em;
+  }
+  header .wrapper #Agauche {
+    display: none; 
+  }
+}
+
+
+
+/* PAGE ACCUEIL */
+
+body:has(#main-content) {
+  background: linear-gradient(to bottom, #eae8d7, #302f2f);
+}
+
+#main-content {
+  font-family: 'Bebas';
+  margin-top: 60px;
+  text-align: center;
+  padding: 20px;
+}
+
+  
+.pizza {
+  display: inline-block;
+  width: 20%;
+  margin: 1%;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pizza h3{
+  font-size: 2em;
+}
+.pizza p{
+  font-size: 1.2em;
+}
+
+#listeIngredients{
+  color: gray;
+  font-size: 1em;
+}
+
+
+footer {
+  font-family: 'Bebas';
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navBar {
+    padding: 5%;
+  }
+
+  header a {
+    margin: 5px 0;
+  }
+
+  #pizza-of-the-moment {
+    max-width: 100%;
+  }
+
+  .pizza {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .pizza {
+    width: 100%;
+  }
+}
+
+.ajouterAuPanier {
+  font-size: 1.2em;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ajouterAuPanier:hover {
+  background-color: #45a049;
+}
+
+
+@keyframes blink {
+  0% {
+      border-color: #ff0000;
+  }
+  50% {
+      border-color: transparent;
+  }
+  100% {
+      border-color: #ff0000;
+  }
+}
+
+#pizza-du-moment-container {
+  display: flex;
+  margin-bottom: 20px;
+  border: 2px solid #ff0000;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  animation: blink 1.5s infinite; /* clignotement de 1.5s */
+}
+
+
+#pizza-du-moment-image {
+  width: 25%; /* Ajustez la largeur de l'image selon vos besoins */
+
+  overflow: hidden;
+  position: relative;
+}
+
+#pizza-du-moment-image::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+#pizza-du-moment-image:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+
+#pizza-non-du-moment-image img{
+  transition: 1s ease;
+  }
+  
+  #pizza-non-du-moment-image img:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 1s ease;
+  }
+
+.non-du-moment-img {
+  width: 70%; /*images reponsive  */
+  height: 200px; 
+  border: 10px ridge #f45502;
+}
+
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+#pizza-du-moment-image img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out; /* Ajout de la transition */
+}
+
+#pizza-du-moment-image:hover img {
+  transform: scale(1.2); /* Zoom lors du survol */
+}
+
+.pizza-du-moment-details {
+  width: 75%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  background-color: white; /* Couleur de fond initiale */
+
+  /* Animation */
+  animation: changementCouleur 4s linear infinite alternate; /* 5s pour la durée, alternate pour faire l'effet aller-retour */
+}
+
+@keyframes changementCouleur {
+  0% {
+      background-color: #eae8d7;
+  }
+  100% {
+      background-color: rgb(245, 211, 162); /* Couleur de fond finale */
+  }
+}
+
+
+.pizza-du-moment-details h2, .pizza-du-moment-details p {
+  color: #3a0000;
+  font-family: 'Bebas';
+  font-size: 2.3em;
+}
+
+#listeIngredientsPizzaDuMoment{
+  color: #534545;
+  font-size: 1.45em;
+}
+
+
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.12);
+  }
+}
+.pizza-du-moment-details h2 {
+  font-size: 3em;
+  animation: pulse 2s infinite, font-effect-fire-animation-keyframes 0.8s infinite alternate;
+  color: rgb(117, 4, 0);
+  font-family: 'Bebas';
+}
+
+.pizza-du-moment-details button {
+  font-size: 3em;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pizza-du-moment-details button:hover {
+  background-color: #45a049;
+}
+
+
+
+/* PAGE PRODUITS */
+
+main:has(.product-list) {
+  background: linear-gradient(to bottom, #eae8d7, #333333);
+}
+
+@media screen and (max-width: 768px) {
+  .product-item {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+}
+
+
+.product-item {
+  width: 25%; /* Set to 25% to display 4 items per line */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-item:hover {
+  transform: scale(1.05); /* Enlarge the product on hover */
+}
+
+.product-image img {
+  max-width: 80%;
+  height: auto;
+  border: 1px solid #ddd; /* Add a border for better visibility */
+}
+
+.product-name {
+  display: block;
+  margin-top: 10px;
+}
+.produit-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.produit-item {
+  width: 21%;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  position: relative; /* Ajout de la position relative */
+  margin: 1%;
+  border: solid black 1px;
+}
+
+.produit-image {
+  max-width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.produit-details {
+  padding: 5%;
+}
+
+.produit-title {
+  font-size: 1.5em;
+}
+
+.produit-price {
+  font-size: 1.2em;
+  color: #333;
+}
+@media screen and (max-width: 768px) {
+  .produit-item {
+      width: 90%; /* Set to 100% for single column on small screens */
+      float: none; /* Remove float on small screens */
+  }
+}
+/* ?objet=produit&action=ListTypeProduit&typeProduit=X */
+
+main:has(.produit-container) {
+  background: linear-gradient(to bottom, #eae8d7, #333333);
+}
+
+.btn-ajouter-panier {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ajouter-panier:hover {
+  background-color: #45a049;
+}
+
+
+
+/* ?objet=produit */ 
+.product-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Espace entre les éléments */
+}
+
+.afficheTypeProduit {
+  position: relative;
+  margin-bottom: 20px;
+  margin: 1em;
+  box-sizing: border-box;
+}
+
+.type-produit-item {
+  position: relative;
+  overflow: hidden;
+  border: 10px ridge #f45502;
+  width: 45vh;
+}
+
+.type-produit-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+
+
+.type-produit-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: height 0.5s ease;
+}
+
+.type-produit-item:hover .type-produit-image {
+  transform: scale(1.1); /* Example: Zoom in on hover */
+}
+
+.type-produit-item:hover .type-produit-details {
+  height: 100%;
+}
+
+.type-product-title {
+  font-family: 'Bebas';
+  font-size: 2.5em;
+  text-decoration: underline;
+  color: rgb(44, 249, 25);
+  text-align: center;
+  margin: 10px 0;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 1); /* Ajustez la valeur selon vos préférences */
+}
+
+
+.couleurProd {
+  text-decoration: none;
+  font-family: 'Bebas';
+  font-size: 2em;
+}
+
+.btn-voir {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 500;
+  line-height: 1;
+  margin-left: 30%; /* le met au milieu */
+  margin-top: 10%;
+  padding: 1em 1.5em;
+  position: relative;
+  transition: filter var(--motion-duration);
+}
+
+.btn-voir:hover {
+  filter: brightness(1.1);
+}
+
+.btn-voir:active {
+  filter: brightness(0.9);
+}
+
+.btn-voir > span {
+  display: block;
+  position: relative;
+  transition: transform var(--motion-duration) var(--motion-ease);
+  z-index: 1;
+}
+
+.btn-voir:hover > span {
+  transform: scale(1.05);
+}
+.btn-voir:active > span {
+  transform: scale(0.95);
+}
+.btn-voir > svg {
+  fill: #17b202;
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+}
+.btn-voir > svg > path {
+  transition: var(--motion-duration) var(--motion-ease);
+}
+
+.btn-voir:hover > svg > path {
+  d: path("M0,0 C0,-5 100,-5 100,0 C105,0 105,100 100,100 C100,105 0,105 0,100 C-5,100 -5,0 0,0");
+}
+.btn-voir:active > svg > path {
+  d: path("M0,0 C30,10 70,10 100,0 C95,30 95,70 100,100 C70,90 30,90 0,100 C5,70 5,30 0,0");
+}
+
+
+
+
+/* PAGE PANIER.PHP */
+
+body:has(.main-panier) {
+  background: linear-gradient(to bottom, #eae8d7, #252525);
+}
+
+@media only screen and (max-width: 767px) {
+  .main-panier {
+    max-width: 80%; 
+  }
+}
+
+
+.main-panier {
+  font-family: 'Bebas';
+  width: 40em;
+  margin: 20px auto;
+  background-color: #fff;
+  margin: 100px auto 40px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.titre-panier {
+  font-size: 3em;
+  text-align: center;
+  color: #333;
+}
+
+.produits-panier {
+  list-style: none;
+  padding: 0;
+}
+
+.produit-panier, .pizza-panier {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  margin-left: 1px;
+}
+
+.produit-panier div, .pizza-panier div {
+  flex: 1; 
+  margin-left: 3%; 
+}
+
+.produit-panier p, .pizza-panier p {
+  font-size: 1.2em;
+  display: block; 
+  margin-bottom: 5px; 
+}
+
+
+.produit-panier img, .pizza-panier img {
+  max-width: 80px;
+  max-height: 80px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+button {
+  font-family: 'Bebas';
+  background-color: #ff5a5f;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.boutonModifier{
+  margin-right: 3em;
+}
+
+.boutonX{
+  font-size: 1.3em;
+}
+
+
+button:hover {
+  background-color: #ff3338;
+}
+
+.total {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+button.payment-btn {
+  margin-left: 0;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+button.payment-btn:hover {
+  background-color: #45a049;
+}
+
+
+
+
+
+/* PAGE displayPaiement.PHP */
+
+#payment-container {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 8%;
+  margin-bottom: 80px;
+  position: relative;
+  width: 48vw;
+  height: auto;
+  border-radius: 16px;
+  background-color: white;
+  border: 2px solid #1B1B1B;
+  box-sizing: border-box;
+  box-shadow: 6px 6px 0px #1B1B1B;
+  border-radius: 8px;
+}
+
+.recap-section {
+  margin: auto;
+  width: 30%;
+  padding: 20px;
+  border: 2px solid #1B1B1B;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.main{
+  display : flex;
+  flex-direction: row-reverse;
+  margin-bottom: auto;
+}
+
+@media screen and (max-width: 768px) {
+  #payment-container {
+    flex-direction: column;
+    width: 100%;
+    float: none;
+    margin: 0;;
+  }
+
+  .recap-section {
+    width: 100%;
+    float: none;
+    margin-top: 21%;
+    margin-bottom: 10%;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.exit-icon {
+  align-self: flex-end;
+}
+
+.infoPaiementTitre {
+  margin-left: 10px;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.payment-input {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 10px;
+  padding: 16px 24px;
+  width: 90%;
+  height: 15%;
+  left: 1048px;
+  top: 16px;
+  background: #FFFFFF;
+  border: 2px solid #1B1B1B;
+  box-sizing: border-box;
+  border-radius: 16px;
+  transition: 0.2s;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  background: #F9E450;
+  border: 3px solid #1B1B1B;
+  border-radius: 16px;
+}
+
+.exp-cvc {
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.expiration {
+  font-size: 0.75rem;
+  width: 50%;
+  margin-right: 20px;
+}
+
+.security {
+  font-size: 0.75rem;
+  width: 50%;
+  margin-left: 20px;
+}
+
+span {
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+.btn {
+  color: #1B1B1B;
+  background-color: #F9E450;
+  border: 2px solid #1B1B1B;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 16px 32px 16px 16px;
+  text-align: center;
+  font-weight: 800;
+  margin-top: 20px;
+  width: 141px;
+  height: 56px;
+  left: 16px;
+  top: 88px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: flex-end;
+  cursor: pointer;
+  transition: 0.16s ease-out;
+}
+
+.btn:hover {
+  background: #FFBB38;
+  border: 4px solid #1B1B1B;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 0px 4px #C1BFFA;
+  border-radius: 16px;
+}
+
+.exit-icon,
+#exit {
+  cursor: pointer;
+}
+
+
+.recap-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.recap-section p {
+  margin: 0;
+  padding: 5px 0;
+  font-size: 1rem;
+}
+
+
+
+
+/* page confirmation de commande */
+.divConfirmationPaiement{
+  font-family: 'Bebas';
+  font-size: 2.5em;
+  text-align: center;
+  margin-top: 7em;
+}
+
+.lienConfirmation{
+  text-align: center;
+  margin-bottom: auto;
+  margin-top: 2em;
+}
+
+.lienConfirmation button{
+  padding: 20px;
+}
+
+
+/*LA MODIFICATION DES INGREDIENTS*/
+/* Ajoutez ces styles à votre feuille de style existante */
+
+.recette-container {
+  display: flex;
+  flex-direction: column; /* Change to column to stack content vertically */
+  max-width: 100%;
+  border: 1px solid #ddd;
+  margin: 1%;
+  padding: 20px;
+  border-radius: 15px;
+  transition: border 0.3s;
+}
+
+.recette-content {
+  display: flex;
+  justify-content: space-between; /* Align items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+.recette-buttons-container {
+  display: flex;
+  justify-content: space-between; /* Align buttons horizontally */
+  margin-top: 20px; /* Add some margin at the top */
+}
+
+.recette-img {
+  height: 25em;
+  width: 25em;
+  margin-right: 20px;
+  border-radius: 12px;
+  border: 5px solid black;
+}
+
+.recette-ingredients {
+  list-style-type: none;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Responsive styles */
+
+/* Ajoutez ces styles à votre feuille de style existante */
+
+/* ... (Styles existants) ... */
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .recette-content {
+    flex-direction: column; /* Change to column for small screens */
+    align-items: flex-start; /* Align items to the start for small screens */
+    justify-content: center;
+  }
+
+    .recette-container {
+      margin: 1% auto; /* Remplacez margin: 1%; par margin: 1% auto; pour centrer horizontalement */
+    }
+  
+  
+    .recette-buttons-container {
+      margin-top: 20px;
+      text-align: center; /* Ajoutez text-align: center; pour centrer les boutons */
+    }
+  
+    .recette-img {
+      margin: 0 auto 20px; /* Ajoutez margin: 0 auto 20px; pour centrer l'image horizontalement */
+    }
+  
+    .recette-ingredients-container {
+      margin: auto; /* Ajoutez margin: auto; pour centrer horizontalement */
+    }
+  
+    .recette-ingredients {
+      justify-content: center;
+      text-align: center; /* Ajoutez text-align: center; pour centrer le texte des ingrédients */
+    }
+  
+    /* ... Autres styles ... */
+}
+
+
+
+/* HISTORIQUE DES COMMANDES */
+body:has(#container-historique) {
+  background: linear-gradient(to bottom, #eae8d7, #302f2f);
+}
+
+.numNombreCommande{
+  color: #607D8B;
+  font-size: 1em;
+}
+
+.titre-historique {
+  text-decoration: underline;
+  font-size: 3em;
+  font-family: 'Bebas';
+  margin-top: 8%;
+  text-align: center;
+}
+
+#container-historique {
+  font-family: 'Bebas';
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 4%;
+}
+
+.commande-historique {
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Bordure arrondie */
+  padding: 20px; /* Augmentation du padding */
+  margin-bottom: 20px;
+  background-color: #fff; /* Fond blanc */
+  cursor: default;
+  width: 48%; /* Largeur de chaque commande */
+  box-sizing: border-box; /* La largeur inclut la bordure et le padding */
+}
+
+.numero-commande {
+  margin-bottom: 15px;
+  text-align: center; /* Centrer le numéro de commande */
+  font-weight: bold;
+  font-size: 22px; /* Ajuster la taille du texte du numéro de commande */
+  cursor: default;
+}
+
+.produit-historique,
+.pizza-historique {
+  font-size: 18px;
+  margin-left: 20px;
+  cursor: default;
+}
+
+.prix-total {
+  text-decoration: underline;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: right; /* Aligner à droite */
+  margin-top: 10px; /* Marge au-dessus du prix total */
+}
+
+.codeCB{
+  font-style: italic;
+  margin-top: -1em;
+  text-align: right;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .commande-historique {
+    width: 100%;
+  }
+}
+
+.mdp-rappel {
+  font-family: 'Bebas';
+  font-size: 0.6em;
+  margin-left: 2%;
+}
+
+.perso-pizza{
+  color: darkgray;
+}
+@media screen and (max-width: 768px) {
+  .perso-pizza {
+    font-size: 0.5em;
+  }
+}

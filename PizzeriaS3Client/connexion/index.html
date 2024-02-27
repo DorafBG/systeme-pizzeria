@@ -1,0 +1,34 @@
+
+  <title>PizzaLand - Connexion</title>
+  <link rel="stylesheet" href="connexion/style.css">
+
+
+
+  <div class="loginDiv">
+    <form action="index.php" method="get">
+      <h1>S'identifier</h1>
+      <div class="input-box">
+        <input type="text" name="loginClient" placeholder="Login" required>
+        <i class='bx bxs-user-rectangle'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="password" name="mdpClient" placeholder="Mot de passe" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+
+      <div class="remember-forgot">
+        <label><input type="checkbox">Se souvenir de moi</label>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Mot de passe oublié ?</a>
+      </div>
+
+      <input type="hidden" name="objet" value="client">
+      <input type="hidden" name="action" value="connect">
+      
+
+      <button type="submit" class="btn">Se connecter</button>
+      <div class="register-link">
+        <p>Vous n'avez pas encore de compte ?<a href="inscription/">S'inscrire</a></p>
+      </div>
+    </form>
+  </div>
